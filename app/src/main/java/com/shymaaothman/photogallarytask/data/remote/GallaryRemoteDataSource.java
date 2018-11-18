@@ -23,7 +23,6 @@ public class GallaryRemoteDataSource extends PageKeyedDataSource<Integer, ImageI
 
     private final String REQUEST_METHOD = "GET";
     private final String URL = "https://api.unsplash.com/photos";
-    // https://api.stackexchange.com/2.2/answers?page=1&pagesize=50&site=stackoverflow
 
     public static final int PAGE_SIZE = 10;
     private static final int FIRST_PAGE = 1;
