@@ -32,7 +32,7 @@ public class ImageLoader {
     private Map<ImageView, String> imageViews = Collections.synchronizedMap(new WeakHashMap<ImageView, String>());
     ExecutorService executorService;
     public static final int POOL_SIZE = 2;
-    public static final int MAX_POOL_SIZE = 100;
+    public static final int MAX_POOL_SIZE = 200;
     public static final int TIMEOUT = 30;
 
     private ImageLoader(Context context){

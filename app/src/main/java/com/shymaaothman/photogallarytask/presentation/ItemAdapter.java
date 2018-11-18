@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.shymaaothman.photogallarytask.downloader.ImageLoader;
@@ -38,6 +39,7 @@ public class ItemAdapter extends PagedListAdapter<ImageItem, ItemAdapter.ItemVie
         if (item != null) {
 
             ImageLoader.getInstance(context).DisplayImage(item.getLinks().getDownload(),holder.imageView);
+            holder.progressBar.setVisibility(View.GONE);
 
         }else{
             Toast.makeText(context, "ImageItem is null", Toast.LENGTH_LONG).show();
@@ -60,10 +62,12 @@ public class ItemAdapter extends PagedListAdapter<ImageItem, ItemAdapter.ItemVie
     class ItemViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageView;
+        ProgressBar progressBar ;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.photo_imageView);
+            progressBar = itemView.findViewById(R.id.progress);
         }
     }
 }
